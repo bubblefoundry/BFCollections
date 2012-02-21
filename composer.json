@@ -1,0 +1,17 @@
+{
+  "name": "bubblefoundry/BFCollections",
+  "type": "library",
+  "description": "BFCollections is a set of collections classes for PHP.",
+  "keywords": ["array", "string", "collection", "option", "box", "partial function"],
+  "homepage": "https://github.com/bubblefoundry/BFCollections",
+  "license": "MIT",
+  "authors": [{
+    "name": "Peter Robinett",
+    "email": "peter@bubblefoundry.com",
+    "homepage": "http://www.bubblefoundry.com"
+  }],
+  "version": "0.1.0",
+  "require": {
+      "php": ">= 5.3.0"
+  }
+}
