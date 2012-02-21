@@ -1,5 +1,5 @@
 <?php
-namespace com\bubblefoundry\collections;
+namespace bubblefoundry\collections;
 
 class BFString extends BFArray {
   
