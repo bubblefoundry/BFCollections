@@ -1,5 +1,5 @@
 <?php
-namespace bubblefoundry\collections;
+namespace bubblefoundry\BFCollections;
 
 /**
  * @author Peter Robinett <peter@bubblefoundry.com>

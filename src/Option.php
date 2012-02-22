@@ -1,5 +1,5 @@
 <?php
-namespace bubblefoundry\collections;
+namespace bubblefoundry\BFCollections;
 
 /**
  * Option is the base class for Some and None.

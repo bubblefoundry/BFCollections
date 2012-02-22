@@ -1,5 +1,5 @@
 <?php
-namespace bubblefoundry\collections;
+namespace bubblefoundry\BFCollections;
 
 /**
  * Box is the base class for Full, Empty, and Failure.
