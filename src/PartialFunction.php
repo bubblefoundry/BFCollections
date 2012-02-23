@@ -12,7 +12,7 @@ class PartialFunction {
     
     foreach ($args as $k => $v) {
       if (!($v instanceof PFCase)) {
-        throw new Error('Only PFCases are allowed. You gave: ' . $v);
+        throw new \Exception('Only PFCases are allowed. You gave: ' . $v);
       }
       $this->cases[] = $v;
     }
