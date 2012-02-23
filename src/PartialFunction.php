@@ -1,22 +1,6 @@
 <?php
 namespace bubblefoundry\BFCollections;
 
-class BFCase {
-  var $condition, $f;
-  
-  function __construct($condition, $f) {
-    if (!is_callable($f)) {
-      throw new Error('$f must be a function');
-    }
-    $this->condition = $condition;
-    $this->f = $f;
-  }
-}
-
-function pfCase($condition, $f) {
-  return new BFCase($condition, $f);
-}
-
 class PartialFunction {
   private $cases;
   
@@ -27,8 +11,8 @@ class PartialFunction {
     }
     
     foreach ($args as $k => $v) {
-      if (!($v instanceof BFCase)) {
-        throw new Error('Only BFCases are allowed. You gave: ' . $v);
+      if (!($v instanceof PFCase)) {
+        throw new Error('Only PFCases are allowed. You gave: ' . $v);
       }
       $this->cases[] = $v;
     }
@@ -78,7 +62,7 @@ class PartialFunction {
     }
     $new_cases = array();
     foreach ($this->cases as $k => $v) {
-      $new_cases[] = new BFCase($v->condition, function () use ($f, $v) {
+      $new_cases[] = new PFCase($v->condition, function () use ($f, $v) {
         $args = func_get_args();
         $vf = new \ReflectionFunction($v->f);
         return $f($vf->invokeArgs($args));
