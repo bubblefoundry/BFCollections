@@ -6,7 +6,7 @@ class PartialFunction {
   
   function __construct() {
     $args = func_get_args();
-    if (is_array($args) && count($args) == 1) {
+    if (is_array($args) && count($args) == 1 && is_array($args[0])) {
       $args = $args[0];
     }
     
