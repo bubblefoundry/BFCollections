@@ -1,7 +1,7 @@
 <?php
 namespace bubblefoundry\BFCollections;
 
-class BFCase {
+class PFCase {
   var $condition, $f;
   
   function __construct($condition, $f) {
@@ -14,7 +14,7 @@ class BFCase {
 }
 
 function pfCase($condition, $f) {
-  return new BFCase($condition, $f);
+  return new PFCase($condition, $f);
 }
 
 ?>
